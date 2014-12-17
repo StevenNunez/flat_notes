@@ -1,0 +1,11 @@
+Total Notes: {{noteCount}}
+<ul>
+  {{#each note in controller}}
+  <li>
+    {{#link-to 'note' note}}{{note.title}}{{/link-to}}
+  </li>
+  {{/each}}
+</ul>
+{{#link-to 'notes.new'}}Create a new note{{/link-to}}
+
+{{ outlet }}
